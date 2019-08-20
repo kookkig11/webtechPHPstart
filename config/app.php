@@ -7,5 +7,5 @@ return [
         'method' => 'index'
     ],
 
-    'title' => 'Starter Framework'
+    'title' => 'Simple Starter Framework'
 ];

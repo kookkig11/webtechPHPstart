@@ -20,6 +20,10 @@ class UsersController extends Controller
         }
         $id = $this->request->params[0];
         $user = (new User())->first($id);
+        if (!$user) {
+            throw new Exception('Model DAta Not Found');
+        }
+
         return $this->render('users/show', ['user' => $user]);
     }
 }

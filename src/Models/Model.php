@@ -30,6 +30,8 @@ class Model
         return $data;
     }
 
+    //test : SQL Injection, PDO Prepare Statement
+
     public function first($id)
     {
         $data = $this->db->queryFirst("select * from " . $this->table . " where id=:id LIMIT 1", [':id' => $id]);

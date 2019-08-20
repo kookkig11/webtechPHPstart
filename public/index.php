@@ -25,6 +25,8 @@ $defaultMethod = Config::read('app.default.method');
 $controllerName = isset($uris[0]) ? array_shift($uris): $defaultController;
 $methodName = isset($uris[0]) ? array_shift($uris): $defaultMethod;
 
+
+/* Inflector เปลี่ยนตัวเล็กเป็นตัวใหญ่ */
 $controllerName = 'App\\Controllers\\'.Inflector::classify($controllerName.'Controller');
 $controller = new $controllerName($uris, $queryStrings);
 $response = $controller->$methodName();

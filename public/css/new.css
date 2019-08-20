@@ -1,0 +1,324 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Mitr', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* ----- navbar ----- */
+.nav-link {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #99cc00;
+  padding: 20px 0px;
+  margin: 0px 20px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+.nav-link:hover {
+  opacity: 1;
+}
+.nav-link::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #99cc00;
+}
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+}
+.nav-link-ltr:hover::before {
+  width: 100%;
+}
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #bbbbbb;
+  font-family: 'Mitr', sans-serif;
+  font-weight: bold;
+}
+.logoImg {
+    width: 50px;
+    height: 60px;
+    margin-left: 5%;
+}
+
+/* ----- footer ----- */
+.footer {
+  margin-top: 50px;
+  height: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ----- page: home ----- */
+.textDes {
+  color: #fff;
+  font-size: 24px;
+  margin-left: 50%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Login Popup */
+.loginBtn {
+  padding: 8px 16px;
+  background-color: rgb(140, 160, 225);
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+}
+.loginBtn:hover {
+  background-color: rgb(59, 93, 206);
+  color: #000;
+  text-decoration: none;
+}
+.login-popup {
+  display: none; /* popup is hidden before button onClick */
+
+  /* containetr */
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+
+/* ----- page: feed ----- */
+.flex {
+    display: flex;
+}
+.col-12 {
+    margin-top: 13%;
+}
+.head-news, .job-news {
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  padding-left: 3%;
+}
+.head-news:before, .job-news:before{
+  content: '';
+  left: -3px;
+  top: 0;
+  position: absolute;
+  background-color: #99cc00;
+  width: 10px;
+  height: 100%;
+  border-radius: 6px;
+}
+.more {
+  font-size: 20px;
+  justify-content: center;
+  float: right;
+  margin-top: 10px;
+}
+.box {
+  margin-top: 20%;
+  background-color: #bbbbbb;
+  width: 100%;
+  height: 200px;
+}
+.new-p {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+.job-news {
+  margin-bottom: 30px;
+}
+.job {
+  margin-top: 8%;
+}
+.job-p {
+  margin-top: 5px;
+  padding-left: 5%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+}
+.job-box {
+  margin-top: 10px;
+  background-color: white;
+  width: 100%;
+  height: 140px;
+  border-radius: 6px;
+  padding: 20px 40px 20px 5%;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.job-logo {
+  width: 100px;
+  height: 100px;
+  background-color: antiquewhite;
+}
+.job-detail {
+  display: block;
+  margin-left: 5%;
+}
+
+
+/* ----- page: profile ----- */
+.pic-profile{
+  
+  background-color: #bbbbbb;
+  width: 300px;
+  height: 300px;
+  margin-top: 60px;
+}
+
+.name{
+  padding: 50px;
+}
+
+/* Full-width input fields */
+ .input-edit {
+    border: 2px solid #CCCCCC;
+    border-radius: 15px;
+    margin: 8px 15px;
+    width: 90%;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size:16px;
+}
+
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+.avatar {
+    width: 200px;
+	  height:200px;
+    border-radius: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+	  display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 4% auto 15% auto;
+    border: 1px solid #888;
+    width: 40%; 
+    padding-bottom: 30px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    animation: zoom 0.6s
+}
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.button-edit{
+  width:180px; 
+  margin-top:200px; 
+  margin-left:900px;
+}
+
+.button-edit-confirm{
+  width:20%; 
+  margin-top:30px;
+  margin-left:73%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.tab-regis{
+  padding-left:14em;
+}
+
+.input-regis{
+  border: 2px solid #CCCCCC;
+  border-radius: 12px;
+  margin: 15px 300px;
+  width: 90%;
+  padding: 12px 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size:16px;
+}
+
+.r-gender{
+  width: 5%;
+  height: 25px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+label {
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+.button-regis{
+  margin-top: 50px;
+  width: 180px;
+  margin-left:950px;
+
+}
+
+.text-gender{
+  margin-left: 110px;
+  margin-top: 30px;
+}
+
+
+/*------- post page --------*/
+.topic {
+  margin-top: 13%;
+}
+
+.topic div {
+  display: flex;
+}
+
+.topic div h6 {
+  margin-right: 40px;
+}
+
+.max {
+  margin-bottom: 120px;
+}
