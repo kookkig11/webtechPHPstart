@@ -55,6 +55,8 @@
 
     <?=$this->section('content')?>
     
+    <?=$this->section('afterContent')?>
+    
     <footer>
         <div class="footer position-fixed">
             <h6>Made By Salmon</h6>

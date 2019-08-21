@@ -27,6 +27,18 @@ class HelloController extends Controller
     public function formSubmit() {
         $this->shouldBePost();
         $data = $this->request->input;
-        return $data->name;
+        $username = $data->username;
+        $passwordInDB = '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq';
+        $password = $data->password;
+        if (password_vertify($password, $passwordInDB)){
+            return 'vertified';
+        }
+        else {
+            return 'incoreect';
+        }
+
+        // return $this->render('admin/manageUser', [
+        //     'name'=>$data->name
+        // ]);        
     }
 }
